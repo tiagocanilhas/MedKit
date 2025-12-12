@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "jsx": "react",
+        "esModuleInterop": true,
+        "paths": {
+            "@images/*": ["./public/images/*"]
+        },
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.d.ts",
+      "global.d.ts"    
+    ]
+}

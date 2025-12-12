@@ -1,0 +1,32 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.image {
+  width: 200px;
+  height: auto;
+}
+
+.whatIsIt {
+  width: 100%;
+  background-color: var(--what-is-it-background);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.howToUse {
+  width: 100%;
+  background-color: var(--how-to-use-background);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.importantNotes {
+  width: 100%;
+  background-color: var(--important-notes-background);
+  border-radius: 8px;
+  padding: 5px;
+}

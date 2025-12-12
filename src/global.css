@@ -1,0 +1,97 @@
+:root {
+  --medkit-title-color: #333333;
+
+  --medkit-inside-color: #ff5959;
+  --medkit-inside-width: 1400px;
+  --medkit-inside-height: 800px;
+
+  --medkit-item-card-background: #ffffff;
+  --medkit-item-card-title: #333333;
+
+  --modal-backgroud-color: #ffffff;
+  --modal-width: 1300px;
+  --modal-height: 700px;
+
+  --what-is-it-background: #db7eff;
+  --how-to-use-background: #67ffe6;
+  --important-notes-background: #ff905d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Animations */
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.u-fadeIn {
+  animation: fadeInEffect var(--anim-time) ease-out forwards;
+}
+
+@keyframes fadeOutEffect {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.u-fadeOut {
+  animation: fadeOutEffect var(--anim-time) ease-in forwards;
+  pointer-events: none !important;
+}
+
+@keyframes zoomInEffect {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.u-zoomIn {
+  animation: zoomInEffect var(--anim-time) ease-out forwards;
+}
+
+@keyframes zoomOutEffect {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+.u-zoomOut {
+  animation: zoomOutEffect var(--anim-time) ease-out forwards;
+  pointer-events: none !important;
+}
+
+@keyframes expandOutEffect {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+.u-expandOut {
+  animation: expandOutEffect var(--anim-time) ease-in forwards;
+  pointer-events: none !important;
+}

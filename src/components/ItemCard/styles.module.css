@@ -1,0 +1,31 @@
+.container {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  background-color: var(--medkit-item-card-background);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.container:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.title {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+  color: var(--medkit-item-card-title);
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}

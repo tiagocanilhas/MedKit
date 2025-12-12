@@ -1,0 +1,35 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  width: var(--medkit-inside-width);
+  height: var(--medkit-inside-height);
+  background-color: var(--medkit-inside-color);
+  border-radius: 20px;
+  animation: zoomInEffect var(--anim-time) ease-out forwards;
+
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  place-items: center;
+  grid-auto-rows: min-content;
+  gap: 30px;
+}
+
+.backButton {
+  width: 200px;
+  height: auto;
+  pointer-events: none;
+}
+
+.backButton :global(path),
+.backButton :global(polyline),
+.backButton :global(line) {
+  pointer-events: auto;
+  cursor: pointer;
+}
