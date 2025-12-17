@@ -1,28 +1,41 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const folderName = 'dist';
+const PATHS = {
+  src: path.resolve(__dirname, 'src'),
+  dist: path.resolve(__dirname, 'dist'),
+  public: path.resolve(__dirname, 'public'),
+};
 
 export default {
   mode: 'production',
-    entry: './src/index.tsx',
+  entry: path.join(PATHS.src, 'index.tsx'),
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, folderName),
+    path: PATHS.dist,
+    filename: 'bundle.[contenthash].js',
     clean: true,
     publicPath: '',
   },
+
   resolve: {
-    extensions: ['.js', '.ts', '.tsx', '.css'], 
+    extensions: ['.tsx', '.ts', '.js', '.css'],
   },
-  plugins: [],
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(PATHS.public, 'index.html'),
+      filename: 'index.html',
+    }),
+  ],
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: ['ts-loader'],
+        use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
@@ -41,7 +54,7 @@ export default {
       },
       {
         test: /\.css$/,
-        exclude: /\.module\.css$/, 
+        exclude: /\.module\.css$/,
         use: ['style-loader', 'css-loader'],
       },
       {
