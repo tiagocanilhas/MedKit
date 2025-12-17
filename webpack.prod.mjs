@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
@@ -29,6 +30,10 @@ export default {
     new HtmlWebpackPlugin({
       template: path.join(PATHS.public, 'index.html'),
       filename: 'index.html',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.SPREADSHEET_ID': JSON.stringify(process.env.SPREADSHEET_ID),
+      'process.env.SHEET_NAME': JSON.stringify(process.env.SHEET_NAME),
     }),
   ],
   module: {
