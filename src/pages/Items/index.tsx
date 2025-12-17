@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Outlet } from 'react-router-dom'
-import SVG from 'react-inlinesvg'
 
 import { ItemCard } from '../../components/ItemCard'
 import { Loading } from '../../components/Loading'
+import { BackButton } from '../../components/BackButton'
 
 import { useExit } from '../../hooks/useExit'
 import { useMedKitData } from '../../hooks/useMedkitData'
@@ -29,11 +29,7 @@ export function Items() {
 
   return (
     <>
-      <SVG
-        src="/images/Arrow.svg"
-        className={`${styles.backButton} ${isExiting ? 'u-fadeOut' : 'u-fadeIn'}`}
-        onClick={handleExit}
-      />
+      <BackButton onClick={handleExit} isExiting={isExiting} />
       <div className={styles.container}>
         <div className={`${styles.box} ${isExiting ? 'u-zoomOut' : 'u-zoomIn'}`}>
           {data.map((item, index) => (

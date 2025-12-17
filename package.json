@@ -38,14 +38,10 @@
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
-    "@emotion/is-prop-valid": "^1.4.0",
     "dotenv": "^17.2.3",
-    "framer-motion": "^12.23.25",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-inlinesvg": "^4.2.0",
     "react-router-dom": "^6.18.0",
-    "read-excel-file": "^6.0.1",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-latest/xlsx-latest.tgz"
   }
 }

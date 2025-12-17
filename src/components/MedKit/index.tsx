@@ -1,5 +1,6 @@
 import * as React from 'react'
-import SVG from 'react-inlinesvg'
+
+import MedKitIcon from './MedKit.svg';
 
 import styles from './styles.module.css'
 
@@ -11,7 +12,12 @@ type MedKitProps = {
 export function MedKit({ onClick, isExiting }: MedKitProps) {
   return (
     <div className={`${styles.container} ${isExiting ? 'u-expandOut' : 'u-zoomIn'}`}>
-      <SVG src="/images/MedKit.svg" className={styles.image} onClick={onClick} />
+      <MedKitIcon 
+        className={styles.image} 
+        onClick={onClick} 
+        width="100%" 
+        height="100%"
+      />
     </div>
   )
 }

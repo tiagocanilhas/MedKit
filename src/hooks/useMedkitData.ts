@@ -17,14 +17,6 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-const EXCEL_SCHEMA = {
-  'name': { prop: 'name', type: String },
-  'imageUrl': { prop: 'imageUrl', type: String },
-  'whatIsIt': { prop: 'whatIsIt', type: String },
-  'howToUse': { prop: 'howToUse', type: String },
-  'importantNotes': { prop: 'importantNotes', type: String },
-};
-
 function formatRawData(data: any[]): MedKitItem[] {
   return data.map((item: any, index: number) => ({
     id: index + 1,
@@ -40,7 +32,7 @@ export function useMedKitData() {
   const [state, dispatch] = useReducer(reducer, { tag: 'loading' })
 
   useEffect(() => {
-    async function fetchGoogle() {
+    async function fetchData() {
       const sheetId = process.env.SPREADSHEET_ID;
       const sheetName = process.env.SHEET_NAME;
       const url = `https://opensheet.elk.sh/${sheetId}/${sheetName}`;
@@ -58,35 +50,7 @@ export function useMedKitData() {
       }
     }
 
-    async function fetchLocal() {
-      const fileName = process.env.LOCAL_FILE;
-
-      try {
-        const res = await fetch(`/${fileName}`)
-
-        if (!res.ok) throw new Error('File not found')
-          
-        const blob = await res.blob()
-        const { rows } = await readXlsxFile(blob, { schema: EXCEL_SCHEMA as any });
-        const formattedData = formatRawData(rows)
-
-        dispatch({ type: 'success', data: formattedData })
-      } catch (err) {
-        dispatch({ type: 'error', error: (err as Error).message })
-      }
-    }
-
-    switch (process.env.DATA_SOURCE) {
-      case 'local':
-        fetchLocal()
-        break
-      case 'google':
-        fetchGoogle()
-        break
-      default:
-        console.error('DATA_SOURCE environment variable is not set correctly.')
-    }
-    
+    fetchData()
   }, [])
 
   return {
