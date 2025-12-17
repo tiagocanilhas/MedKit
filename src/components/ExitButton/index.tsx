@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import CloseButtonIcon from './CloseButton.svg';
+
 import styles from './styles.module.css'
 
 type ExitButtonType = {
@@ -7,5 +9,12 @@ type ExitButtonType = {
 }
 
 export function ExitButton({ onClick }: ExitButtonType) {
-  return <img src="/images/CloseButton.svg" className={styles.button} onClick={onClick} />
+  return (
+    <CloseButtonIcon
+      className={styles.button}
+      onClick={onClick}
+      width="100%"
+      height="100%"
+    />
+  )
 }

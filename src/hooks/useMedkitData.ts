@@ -1,6 +1,5 @@
 import { useEffect, useReducer } from 'react'
 import { MedKitItem } from '../types/MedKitItem'
-import readXlsxFile from 'read-excel-file'
 
 type State = { tag: 'loading' } | { tag: 'loaded'; data: MedKitItem[] } | { tag: 'error'; error: string }
 
