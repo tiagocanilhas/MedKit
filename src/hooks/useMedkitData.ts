@@ -18,12 +18,9 @@ function reducer(state: State, action: Action): State {
 
 function formatRawData(data: any[]): MedKitItem[] {
   return data.map((item: any, index: number) => ({
+    ...item,
     id: index + 1,
-    name: item.name || '',
     imageUrl: item.imageUrl == '' ? '/images/no_image.jpg' : item.imageUrl,
-    whatIsIt: item.whatIsIt || '',
-    howToUse: item.howToUse || '',
-    importantNotes: item.importantNotes || ''
   }));
 }
 

@@ -1,16 +1,18 @@
 :root {
+  --background-color: #7cd6ff;
+
   --medkit-title-color: #333333;
 
   --medkit-inside-color: #ff5959;
-  --medkit-inside-width: 1400px;
-  --medkit-inside-height: 800px;
+  --medkit-inside-width: 90vw;
+  --medkit-inside-height: 75vh;
 
   --medkit-item-card-background: #ffffff;
   --medkit-item-card-title: #333333;
 
   --modal-backgroud-color: #ffffff;
-  --modal-width: 1300px;
-  --modal-height: 700px;
+  --modal-width: 85vw;
+  --modal-height: 70vh;
 
   --what-is-it-background: #db7eff;
   --how-to-use-background: #67ffe6;
@@ -23,6 +25,8 @@ body {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+
+  background-color: var(--background-color);
 }
 
 /* Animations */

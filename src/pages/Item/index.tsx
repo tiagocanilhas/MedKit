@@ -1,23 +1,28 @@
 import * as React from 'react'
-import { useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useOutletContext, useParams } from 'react-router-dom'
 
 import { Modal } from '../../components/Modal'
 
 import { MedKitItem } from '../../types/MedKitItem'
-import { MEDKIT_ITEMS } from '../../constants'
 
 import styles from './styles.module.css'
 
 export function Item() {
-  const id = useParams().id
-  const item: MedKitItem = MEDKIT_ITEMS.find(item => id == item.id.toString())
+  const id = Number(useParams().id)
+  const data = useOutletContext<MedKitItem[]>()
+  const item = data?.find((i) => i.id === id)
+
+  if (!item) {
+    alert('Error loading item data.')
+    return <></>
+  }
 
   return (
     <Modal
       content={
         <div className={styles.item}>
           <img src={item.imageUrl} alt={item.name} className={styles.image} />
+          <h1 className={styles.name}>{item.name}</h1>
           <div className={styles.whatIsIt}>
             <h2>O que é:</h2>
             <p>{item.whatIsIt}</p>

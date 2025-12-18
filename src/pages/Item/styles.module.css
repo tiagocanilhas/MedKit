@@ -10,6 +10,12 @@
   height: auto;
 }
 
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .whatIsIt {
   width: 100%;
   background-color: var(--what-is-it-background);

@@ -37,7 +37,7 @@ export function Items() {
           ))}
         </div>
       </div>
-      <Outlet />
+      <Outlet context={data} />
     </>
   )
 }

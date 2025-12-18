@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { createMemoryRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createMemoryRouter, RouterProvider } from 'react-router-dom'
 
 import { Home } from './pages/Home'
 import { Items } from './pages/Items'
