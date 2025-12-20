@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom'
 import { ItemCard } from '../../components/ItemCard'
 import { Loading } from '../../components/Loading'
 import { BackButton } from '../../components/BackButton'
+import { ContainerWithScrollBar } from '../../components/ContainerWithScrollBar'
 
 import { useExit } from '../../hooks/useExit'
 import { useMedKitData } from '../../hooks/useMedkitData'
@@ -29,14 +30,14 @@ export function Items() {
 
   return (
     <>
-      <BackButton onClick={handleExit} isExiting={isExiting} />
-      <div className={styles.container}>
-        <div className={`${styles.box} ${isExiting ? 'u-zoomOut' : 'u-zoomIn'}`}>
-          {data.map((item, index) => (
-            <ItemCard key={index} item={item} />
-          ))}
-        </div>
+      <div className={styles.backButtonContainer}>
+        <BackButton onClick={handleExit} isExiting={isExiting} />
       </div>
+      <ContainerWithScrollBar className={`${styles.box} ${isExiting ? 'u-zoomOut' : 'u-zoomIn'}`}>
+        {data.map((item, index) => (
+          <ItemCard key={index} item={item} />
+        ))}
+      </ContainerWithScrollBar>
       <Outlet context={data} />
     </>
   )

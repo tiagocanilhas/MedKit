@@ -1,35 +1,22 @@
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.backButtonContainer {
+  margin: 20px;
 }
 
 .box {
-  width: var(--medkit-inside-width);
+  margin-left: 10px;
+  margin-right: 10px;
   height: var(--medkit-inside-height);
+  padding: 20px;
+  padding-right: 10px;
+
   background-color: var(--medkit-inside-color);
-  border-radius: 20px;
+  border-radius: 10px;
+  
   animation: zoomInEffect var(--anim-time) ease-out forwards;
 
-  padding: 20px;
-
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   place-items: center;
   grid-auto-rows: min-content;
   gap: 30px;
-}
-
-.backButton {
-  width: 200px;
-  height: auto;
-  pointer-events: none;
-}
-
-.backButton :global(path),
-.backButton :global(polyline),
-.backButton :global(line) {
-  pointer-events: auto;
-  cursor: pointer;
 }

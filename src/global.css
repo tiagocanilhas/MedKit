@@ -4,8 +4,7 @@
   --medkit-title-color: #333333;
 
   --medkit-inside-color: #ff5959;
-  --medkit-inside-width: 90vw;
-  --medkit-inside-height: 75vh;
+  --medkit-inside-height: 76vh;
 
   --medkit-item-card-background: #ffffff;
   --medkit-item-card-title: #333333;
@@ -22,9 +21,6 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
 
   background-color: var(--background-color);
 }

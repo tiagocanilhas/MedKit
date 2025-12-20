@@ -1,11 +1,5 @@
 .button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: #aaa;
-  cursor: pointer;
-
-  width: 150px;
+  width: 100px;
   height: auto;
 
   pointer-events: none;

@@ -7,18 +7,20 @@ import { useExit } from '../../hooks/useExit'
 import styles from './styles.module.css'
 
 type ModalProps = {
-  content: React.ReactNode
+  children: React.ReactNode
   onClosePath: string
 }
 
-export function Modal({ content, onClosePath }: ModalProps) {
+export function Modal({ children, onClosePath }: ModalProps) {
   const { isExiting, exit } = useExit()
 
   return (
     <div className={`${styles.overlay} ${isExiting ? 'u-fadeOut' : 'u-fadeIn'}`}>
       <div className={`${styles.container} ${isExiting ? 'u-zoomOut' : 'u-zoomIn'}`}>
-        <ExitButton onClick={() => exit(onClosePath)} />
-        {content}
+        <div className={styles.exitButtonContainer}>
+         <ExitButton onClick={() => exit(onClosePath)} />
+        </div>
+        {children}
       </div>
     </div>
   )

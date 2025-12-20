@@ -2,6 +2,7 @@ import * as React from 'react'
 import { useOutletContext, useParams } from 'react-router-dom'
 
 import { Modal } from '../../components/Modal'
+import { ContainerWithScrollBar } from '../../components/ContainerWithScrollBar'
 
 import { MedKitItem } from '../../types/MedKitItem'
 
@@ -18,26 +19,30 @@ export function Item() {
   }
 
   return (
-    <Modal
-      content={
-        <div className={styles.item}>
+    <Modal onClosePath="/items">
+      <div className={styles.item}>
+
+        <div className={styles.image}>
           <img src={item.imageUrl} alt={item.name} className={styles.image} />
           <h1 className={styles.name}>{item.name}</h1>
-          <div className={styles.whatIsIt}>
-            <h2>O que é:</h2>
-            <p>{item.whatIsIt}</p>
-          </div>
-          <div className={styles.howToUse}>
-            <h2>Como usar:</h2>
-            <p>{item.howToUse}</p>
-          </div>
-          <div className={styles.importantNotes}>
-            <h2>Dicas Importantes:</h2>
-            <p>{item.importantNotes}</p>
-          </div>
         </div>
-      }
-      onClosePath="/items"
-    />
+
+        <div className={styles.details}>
+          <ContainerWithScrollBar className={styles.whatIsIt}>
+            <h2 className={styles.title}>O que é:</h2>
+            <p className={styles.text}>{item.whatIsIt}</p>
+          </ContainerWithScrollBar>
+          <ContainerWithScrollBar className={styles.howToUse}>
+            <h2 className={styles.title}>Como usar:</h2>
+            <p className={styles.text}>{item.howToUse}</p>
+          </ContainerWithScrollBar>
+          <ContainerWithScrollBar className={styles.importantNotes}>
+            <h2 className={styles.title}>Dicas Importantes:</h2>
+            <p className={styles.text}>{item.importantNotes}</p>
+          </ContainerWithScrollBar>
+        </div>
+
+      </div>
+    </Modal>
   )
 }

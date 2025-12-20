@@ -1,8 +1,16 @@
 .item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 15px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .image {
@@ -14,25 +22,51 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.whatIsIt,
+.howToUse,
+.importantNotes {
+  border-radius: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  
+  flex: 1;
+
+  text-align: justify;
+  word-break: break-word;
 }
 
 .whatIsIt {
-  width: 100%;
   background-color: var(--what-is-it-background);
-  border-radius: 8px;
-  padding: 5px;
 }
 
 .howToUse {
-  width: 100%;
   background-color: var(--how-to-use-background);
-  border-radius: 8px;
-  padding: 5px;
 }
 
 .importantNotes {
-  width: 100%;
   background-color: var(--important-notes-background);
-  border-radius: 8px;
-  padding: 5px;
+}
+
+.title {
+  margin: 0;
+
+}
+
+.text {
+  margin: 0;
 }
