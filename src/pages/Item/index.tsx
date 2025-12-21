@@ -4,14 +4,17 @@ import { useOutletContext, useParams } from 'react-router-dom'
 import { Modal } from '../../components/Modal'
 import { ContainerWithScrollBar } from '../../components/ContainerWithScrollBar'
 
+import { useText } from '../../hooks/useText'
+
 import { MedKitItem } from '../../types/MedKitItem'
 
 import styles from './styles.module.css'
 
 export function Item() {
+  const { t, keys } = useText()
   const id = Number(useParams().id)
   const data = useOutletContext<MedKitItem[]>()
-  const item = data?.find((i) => i.id === id)
+  const item = data?.find(i => i.id === id)
 
   if (!item) {
     alert('Error loading item data.')
@@ -21,7 +24,6 @@ export function Item() {
   return (
     <Modal onClosePath="/items">
       <div className={styles.item}>
-
         <div className={styles.image}>
           <img src={item.imageUrl} alt={item.name} className={styles.image} />
           <h1 className={styles.name}>{item.name}</h1>
@@ -29,19 +31,18 @@ export function Item() {
 
         <div className={styles.details}>
           <ContainerWithScrollBar className={styles.whatIsIt}>
-            <h2 className={styles.title}>O que é:</h2>
+            <h2 className={styles.title}>{t(keys.item.whatIsIt)}</h2>
             <p className={styles.text}>{item.whatIsIt}</p>
           </ContainerWithScrollBar>
           <ContainerWithScrollBar className={styles.howToUse}>
-            <h2 className={styles.title}>Como usar:</h2>
+            <h2 className={styles.title}>{t(keys.item.howToUse)}</h2>
             <p className={styles.text}>{item.howToUse}</p>
           </ContainerWithScrollBar>
           <ContainerWithScrollBar className={styles.importantNotes}>
-            <h2 className={styles.title}>Dicas Importantes:</h2>
+            <h2 className={styles.title}>{t(keys.item.importantNotes)}</h2>
             <p className={styles.text}>{item.importantNotes}</p>
           </ContainerWithScrollBar>
         </div>
-
       </div>
     </Modal>
   )

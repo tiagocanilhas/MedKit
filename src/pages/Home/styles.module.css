@@ -1,12 +1,20 @@
 .container {
   position: absolute;
-  top: 50px;
+  top: 20px;
   left: 50%;
   transform: translate(-50%);
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .title {
@@ -15,4 +23,9 @@
   color: var(--medkit-title-color);
   margin: 0;
   text-align: center;
+}
+
+.medkitContainer {
+  position: relative;
+  width: 35%;
 }

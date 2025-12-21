@@ -8,9 +8,5 @@ type ContainerWithScrollBarProps = {
 }
 
 export function ContainerWithScrollBar({ className, children }: ContainerWithScrollBarProps) {
-  return (
-    <div className={`${styles.customScroll} ${className}`}>
-      {children}
-    </div>
-  )
+  return <div className={`${styles.customScroll} ${className}`}>{children}</div>
 }

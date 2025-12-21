@@ -21,7 +21,7 @@ function formatRawData(data: any[]): MedKitItem[] {
     ...item,
     id: index + 1,
     imageUrl: item.imageUrl == '' ? '/images/no_image.jpg' : item.imageUrl,
-  }));
+  }))
 }
 
 export function useMedKitData() {
@@ -29,9 +29,9 @@ export function useMedKitData() {
 
   useEffect(() => {
     async function fetchData() {
-      const sheetId = process.env.SPREADSHEET_ID;
-      const sheetName = process.env.SHEET_NAME;
-      const url = `https://opensheet.elk.sh/${sheetId}/${sheetName}`;
+      const sheetId = process.env.SPREADSHEET_ID
+      const sheetName = process.env.SHEET_NAME
+      const url = `https://opensheet.elk.sh/${sheetId}/${sheetName}`
 
       try {
         const res = await fetch(url)

@@ -11,7 +11,7 @@
 
   background-color: var(--medkit-inside-color);
   border-radius: 10px;
-  
+
   animation: zoomInEffect var(--anim-time) ease-out forwards;
 
   display: grid;

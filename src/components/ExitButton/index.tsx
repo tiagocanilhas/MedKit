@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import CloseButtonIcon from './CloseButton.svg';
+import CloseButtonIcon from './CloseButton.svg'
 
 import styles from './styles.module.css'
 
@@ -9,12 +9,5 @@ type ExitButtonType = {
 }
 
 export function ExitButton({ onClick }: ExitButtonType) {
-  return (
-    <CloseButtonIcon
-      className={styles.button}
-      onClick={onClick}
-      width="100%"
-      height="100%"
-    />
-  )
+  return <CloseButtonIcon className={styles.button} onClick={onClick} width="100%" height="100%" />
 }

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import BackButtonIcon from './Arrow.svg';
+import BackButtonIcon from './Arrow.svg'
 
 import styles from './styles.module.css'
 
@@ -10,10 +10,5 @@ type ExitButtonType = {
 }
 
 export function BackButton({ onClick, isExiting }: ExitButtonType) {
-  return (
-    <BackButtonIcon
-      className={`${styles.button} ${isExiting ? 'u-fadeOut' : 'u-fadeIn'}`}
-      onClick={onClick}
-    />
-  )
+  return <BackButtonIcon className={`${styles.button} ${isExiting ? 'u-fadeOut' : 'u-fadeIn'}`} onClick={onClick} />
 }

@@ -18,7 +18,7 @@ export function Modal({ children, onClosePath }: ModalProps) {
     <div className={`${styles.overlay} ${isExiting ? 'u-fadeOut' : 'u-fadeIn'}`}>
       <div className={`${styles.container} ${isExiting ? 'u-zoomOut' : 'u-zoomIn'}`}>
         <div className={styles.exitButtonContainer}>
-         <ExitButton onClick={() => exit(onClosePath)} />
+          <ExitButton onClick={() => exit(onClosePath)} />
         </div>
         {children}
       </div>

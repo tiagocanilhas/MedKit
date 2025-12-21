@@ -14,8 +14,8 @@
 .customScroll::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  
-  border: 4px solid transparent; 
+
+  border: 4px solid transparent;
   background-clip: content-box;
 }
 
