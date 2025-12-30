@@ -3,11 +3,12 @@
 }
 
 .box {
+  height: var(--medkit-inside-height);
   margin-left: 10px;
   margin-right: 10px;
-  height: var(--medkit-inside-height);
   padding: 20px;
   padding-right: 10px;
+  box-sizing: border-box; 
 
   background-color: var(--medkit-inside-color);
   border-radius: 10px;
@@ -15,8 +16,9 @@
   animation: zoomInEffect var(--anim-time) ease-out forwards;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-content: flex-start;
   place-items: center;
-  grid-auto-rows: min-content;
-  gap: 30px;
+  gap: 15px 0px;
+  
 }
