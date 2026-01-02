@@ -16,11 +16,21 @@ function reducer(state: State, action: Action): State {
   }
 }
 
+function transformDriveLink(url: string): string {
+  if (!url) return ''
+  if (!url.includes('drive.google.com')) return url
+
+  const idMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)/) || url.match(/id=([a-zA-Z0-9_-]+)/)
+  if (idMatch && idMatch[1]) return `https://lh3.googleusercontent.com/d/${idMatch[1]}`
+
+  return url
+}
+
 function formatRawData(data: any[]): MedKitItem[] {
   return data.map((item: any, index: number) => ({
     ...item,
     id: index + 1,
-    imageUrl: item.imageUrl == '' ? '/images/no_image.jpg' : item.imageUrl,
+    imageUrl: item.imageUrl == '' ? '/images/no_image.jpg' : transformDriveLink(item.imageUrl),
   }))
 }
 

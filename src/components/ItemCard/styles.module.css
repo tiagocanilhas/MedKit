@@ -1,13 +1,12 @@
 .container {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 15px;
   background-color: var(--medkit-item-card-background);
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   cursor: pointer;
   transition: all 0.3s ease;
@@ -19,13 +18,17 @@
 }
 
 .title {
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
-  margin-top: 10px;
+  padding: 0 5px;
   color: var(--medkit-item-card-title);
 }
 
 .image {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  padding: 10px;
+  border-radius: 15px;
+  object-fit: contain;
 }

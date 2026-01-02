@@ -18,11 +18,15 @@
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 5rem;
   margin-bottom: 20px;
   color: var(--medkit-title-color);
   margin: 0;
   text-align: center;
+}
+
+.text {
+  font-size: 1.1rem;
 }
 
 .medkitContainer {
