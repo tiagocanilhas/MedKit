@@ -23,8 +23,8 @@ export function Item() {
 
   return (
     <Modal onClosePath="/items">
-      <div className={styles.item}>
-        <div className={styles.image}>
+      <ContainerWithScrollBar className={styles.item}>
+        <div className={styles.imageContainer}>
           <img src={item.imageUrl} alt={item.name} className={styles.image} />
           <h1 className={styles.name}>{item.name}</h1>
         </div>
@@ -43,7 +43,7 @@ export function Item() {
             <p className={styles.text}>{item.importantNotes}</p>
           </ContainerWithScrollBar>
         </div>
-      </div>
+      </ContainerWithScrollBar>
     </Modal>
   )
 }
