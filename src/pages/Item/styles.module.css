@@ -4,7 +4,7 @@
   align-items: center;
   gap: 15px;
   height: 100%;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .imageContainer {
@@ -15,8 +15,7 @@
 }
 
 .image {
-  width: 200px;
-  height: auto;
+  width: 90%;
 }
 
 .name {
@@ -83,7 +82,6 @@
 
   .image {
     width: 50%;
-    height: auto;
   }
 
   .whatIsIt,
