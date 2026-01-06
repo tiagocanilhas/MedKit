@@ -28,22 +28,25 @@ export function Item() {
           <img src={item.imageUrl} alt={item.name} className={styles.image} />
           <h1 className={styles.name}>{item.name}</h1>
         </div>
-
         <div className={styles.details}>
-          <ContainerWithScrollBar className={styles.whatIsIt}>
-            <h2 className={styles.title}>{t(keys.item.whatIsIt)}</h2>
-            <p className={styles.text}>{item.whatIsIt}</p>
-          </ContainerWithScrollBar>
-          <ContainerWithScrollBar className={styles.howToUse}>
-            <h2 className={styles.title}>{t(keys.item.howToUse)}</h2>
-            <p className={styles.text}>{item.howToUse}</p>
-          </ContainerWithScrollBar>
-          <ContainerWithScrollBar className={styles.importantNotes}>
-            <h2 className={styles.title}>{t(keys.item.importantNotes)}</h2>
-            <p className={styles.text}>{item.importantNotes}</p>
-          </ContainerWithScrollBar>
+          <Details className={styles.whatIsIt} title={t(keys.item.whatIsIt)} text={item.whatIsIt} />
+          <Details className={styles.howToUse} title={t(keys.item.howToUse)} text={item.howToUse} />
+          <Details className={styles.importantNotes} title={t(keys.item.importantNotes)} text={item.importantNotes} />
         </div>
       </ContainerWithScrollBar>
     </Modal>
   )
+}
+
+type DetailsProps = {
+  className?: string
+  title: string
+  text: string
+}
+
+function Details({ className, title, text }: DetailsProps) {
+  return <ContainerWithScrollBar className={className}>
+    <h2 className={styles.title}>{title}</h2>
+    <p className={styles.text}>{text}</p>
+  </ContainerWithScrollBar>
 }

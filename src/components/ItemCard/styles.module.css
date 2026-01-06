@@ -32,3 +32,15 @@
   border-radius: 15px;
   object-fit: contain;
 }
+
+
+@media (max-width: 600px) {
+  .container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
