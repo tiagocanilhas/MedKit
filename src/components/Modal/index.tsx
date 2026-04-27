@@ -12,7 +12,9 @@ type ModalProps = {
 }
 
 export function Modal({ children, onClosePath }: ModalProps) {
-  const { isExiting, exit } = useExit()
+  const { exitingPath, exit } = useExit()
+
+  const isExiting = !!exitingPath
 
   return (
     <div className={`${styles.overlay} ${isExiting ? 'u-fadeOut' : 'u-fadeIn'}`}>

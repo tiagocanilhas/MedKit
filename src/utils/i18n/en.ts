@@ -10,6 +10,7 @@ const enTranslations: TranslationType = {
     whatIsIt: 'What is it:',
     howToUse: 'How to use:',
     importantNotes: 'Important Notes:',
+    quantity: 'Quantity',
   },
 }
 

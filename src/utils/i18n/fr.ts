@@ -10,6 +10,7 @@ const frTranslations: TranslationType = {
     whatIsIt: 'Qu\'est-ce que c\'est :',
     howToUse: 'Comment l\'utiliser :',
     importantNotes: 'Notes importantes :',
+    quantity: 'Quantité',
   },
 }
 

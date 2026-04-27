@@ -27,6 +27,7 @@ export function Item() {
         <div className={styles.imageContainer}>
           <img src={item.imageUrl} alt={item.name} className={styles.image} />
           <h1 className={styles.name}>{item.name}</h1>
+          <p className={styles.quantity}>{t(keys.item.quantity)}: {item.quantity}</p>
         </div>
         <div className={styles.details}>
           <Details className={styles.whatIsIt} title={t(keys.item.whatIsIt)} text={item.whatIsIt} />

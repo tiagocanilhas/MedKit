@@ -1,7 +1,3 @@
-.backButtonContainer {
-  margin: 20px;
-}
-
 .box {
   height: var(--medkit-inside-height);
   margin-left: 10px;

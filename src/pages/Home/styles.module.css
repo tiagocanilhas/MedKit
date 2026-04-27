@@ -5,7 +5,6 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
 }
 
@@ -29,10 +28,22 @@
   text-align: center;
 }
 
-.medkitContainer {
-  position: relative;
-  width: 35%;
-  margin: 25px;
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.wrapper {
+  width: 200px;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 @media (max-width: 600px) {
@@ -46,5 +57,9 @@
 
   .text {
     font-size: 1rem;
+  }
+
+  .row {
+    flex-direction: column;
   }
 }

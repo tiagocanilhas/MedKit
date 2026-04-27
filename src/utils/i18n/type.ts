@@ -8,6 +8,7 @@ const RAW_KEYS = {
     whatIsIt: '',
     howToUse: '',
     importantNotes: '',
+    quantity: '',
   },
 }
 

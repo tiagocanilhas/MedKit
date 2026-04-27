@@ -10,6 +10,7 @@ const ptTranslations: TranslationType = {
     whatIsIt: 'O que é:',
     howToUse: 'Como usar:',
     importantNotes: 'Dicas Importantes:',
+    quantity: 'Quantidade',
   },
 }
 

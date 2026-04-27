@@ -5,16 +5,17 @@ import { ANIMATION_DURATION } from '../constants'
 
 export function useExit() {
   const navigate = useNavigate()
-  const [isExiting, setIsExiting] = useState(false)
+  const [exitingPath, setExitingPath] = useState<string | null>(null)
 
   function exit(path: string) {
-    if (isExiting) return
+    if (exitingPath) return
 
-    setIsExiting(true)
+    setExitingPath(path)
+
     setTimeout(() => {
       navigate(path)
     }, ANIMATION_DURATION)
   }
 
-  return { isExiting, exit }
+  return { exitingPath, exit }
 }

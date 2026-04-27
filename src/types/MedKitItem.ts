@@ -5,4 +5,5 @@ export type MedKitItem = {
   whatIsIt: string
   howToUse: string
   importantNotes: string
+  quantity: string
 }
