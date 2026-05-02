@@ -4,7 +4,7 @@
   --medkit-title-color: #333333;
 
   --medkit-inside-color: #ff5959;
-  --medkit-inside-height: 76vh;
+  --medkit-inside-height: 84vh;
 
   --medkit-item-card-background: #ffffff;
   --medkit-item-card-title: #333333;
@@ -94,7 +94,7 @@ body {
 .u-expandOut {
   animation: expandOutEffect var(--anim-time) ease-in forwards;
   pointer-events: none !important;
-  transform-origin: center center; /* Garante expansão centralizada */
-  z-index: 9999; /* Também pode colocar aqui por segurança */
+  transform-origin: center center;
+  z-index: 9999;
   position: relative;
 }

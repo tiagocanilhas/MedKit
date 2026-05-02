@@ -1,26 +1,17 @@
-.box {
-  height: var(--medkit-inside-height);
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 20px;
-  padding-right: 10px;
-  box-sizing: border-box;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-  background-color: var(--medkit-inside-color);
+  height: var(--medkit-inside-height); 
+  margin: 5px;
   border-radius: 10px;
-
-  animation: zoomInEffect var(--anim-time) ease-out forwards;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  align-content: flex-start;
-  place-items: center;
-  gap: 15px 0px;
+  
+  background-color: var(--medkit-inside-color);
 }
 
-
 @media (max-width: 600px) {
-  .box {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  .container {
+    grid-template-columns: auto;
   }
 }

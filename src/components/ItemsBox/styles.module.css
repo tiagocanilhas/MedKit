@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  max-height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  margin: 5px;
+  overflow: hidden;
+
+  animation: zoomInEffect var(--anim-time) ease-out forwards;
+
+  background-color: var(--medkit-inside-color);
+}
+
+.container p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 5px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  align-content: flex-start;
+  place-items: center;
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+
+  gap: 15px 0px;
+  padding: 5px 0 5px 0;
+}
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

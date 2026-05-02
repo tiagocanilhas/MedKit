@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { createMemoryRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { Home } from './pages/Home'
 
@@ -12,7 +12,7 @@ import { Recommendations } from './pages/Recommendations'
 
 import './global.css'
 
-const router = createMemoryRouter([
+const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
