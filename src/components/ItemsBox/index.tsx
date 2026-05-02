@@ -21,6 +21,10 @@ export function ItemsBox({ title, data, color, className }: ItemsBoxProps) {
           <ItemCard key={index} item={item} />
         ))}
       </ContainerWithScrollBar>
+      
+      <footer>
+        <p>(DGE, 2010)</p>
+      </footer>
     </div>
   )
 }

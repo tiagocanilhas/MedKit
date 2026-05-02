@@ -1,3 +1,10 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -22,4 +29,14 @@
 
 .card:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 20px;
+  }
 }

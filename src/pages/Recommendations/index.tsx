@@ -27,8 +27,10 @@ export function Recommendations() {
             <li><strong>Identificação:</strong> A caixa deve ser visível (cor vermelha ou com cruz branca) e fácil de transportar.</li>
             <li><strong>Segurança:</strong> Evite guardar medicamentos que exijam receita médica, a menos que sejam de uso pessoal e autorizado de uma criança específica.</li>
           </ul>
-
-          <p>Fonte: Informação Técnica Nº 01/2010</p>
+      
+          <footer>
+            <p>(DGE, 2010)</p>
+          </footer>
         </ContainerWithScrollBar>
       </Layout>
       <Outlet />

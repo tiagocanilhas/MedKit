@@ -3,6 +3,7 @@ import * as React from 'react'
 import { GroupPair } from '../../types/GroupPair'
 
 import styles from './styles.module.css'
+import { ContainerWithScrollBar } from '../ContainerWithScrollBar'
 
 type ItemsPageNoGroupSelectedProps = {
   groups: GroupPair[]
@@ -16,7 +17,7 @@ export function ItemsPageNoGroupSelected({ groups, setGroup }: ItemsPageNoGroupS
   const secondRow = groups.slice(midIndex);
 
   return (
-    <>
+    <ContainerWithScrollBar className={styles.container}>
       <div className={styles.row}>
         {firstRow.map((group, index) => (
           <div 
@@ -42,7 +43,7 @@ export function ItemsPageNoGroupSelected({ groups, setGroup }: ItemsPageNoGroupS
           </div>
         ))}
       </div>
-    </>
+    </ContainerWithScrollBar>
   )
 }
 

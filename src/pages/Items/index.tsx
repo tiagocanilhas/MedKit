@@ -25,9 +25,9 @@ export function Items() {
     setGroup(group)
   }
   
-  const remainingGroups: GroupPair[] = data ? Array.from(
+  const allGroups: GroupPair[] = data ? Array.from(
       data.reduce((acc, item) => {
-        if (item.group !== group?.name && !acc.has(item.group)) {
+        if (!acc.has(item.group)) {
           acc.set(item.group, { 
             name: item.group, 
             color: item.color || '#ccc' 
@@ -44,7 +44,7 @@ export function Items() {
   }
 
 
-  
+
   if (isLoading) {
     return <Loading />
   }
@@ -62,11 +62,11 @@ export function Items() {
             <ItemsPageGroupSelected
               data={data}
               group={group}
-              remainingGroups={remainingGroups}
+              allGroups={allGroups}
               setGroup={selectItemGroup}
             />
           ) : (
-            <ItemsPageNoGroupSelected groups={remainingGroups} setGroup={selectItemGroup} />
+            <ItemsPageNoGroupSelected groups={allGroups} setGroup={selectItemGroup} />
           )}
         </div>
       </Layout>

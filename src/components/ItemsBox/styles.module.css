@@ -10,6 +10,7 @@
 
   animation: zoomInEffect var(--anim-time) ease-out forwards;
 
+
   background-color: var(--medkit-inside-color);
 }
 
@@ -27,6 +28,7 @@
   align-content: flex-start;
   place-items: center;
   box-sizing: border-box;
+  flex: 1;
 
   overflow-x: hidden;
 

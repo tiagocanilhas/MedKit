@@ -12,14 +12,14 @@ import styles from './styles.module.css'
 type ItemsPageGroupSelectedProps = {
   data: MedKitItem[]
   group: GroupPair
-  remainingGroups: GroupPair[]
+  allGroups: GroupPair[]
   setGroup: (group: GroupPair) => void
 }
 
 export function ItemsPageGroupSelected({ 
   data,
   group,
-  remainingGroups,
+  allGroups,
   setGroup
 }: ItemsPageGroupSelectedProps) {
   const selectedData = data.filter(item => item.group === group.name)
@@ -29,17 +29,21 @@ export function ItemsPageGroupSelected({
 
       <ItemsBox title={group.name} data={selectedData} color={group.color} />
 
-      <ContainerWithScrollBar className={styles.remainingGroupsContainer}>
-        {remainingGroups.map((group, index) => (
-          <div 
-            key={index}
-            className={styles.card}
-            style={{ backgroundColor: group.color }}
-            onClick={() => setGroup(group)}
-          >
-            <p>{group.name}</p>
-          </div>
-        ))}
+      <ContainerWithScrollBar className={styles.groupsContainer}>
+       {allGroups.map((currentGroup) => {
+          const isActive = currentGroup.name === group.name;
+
+          return (
+            <div 
+              key={currentGroup.name}
+              className={`${styles.card} ${isActive ? styles.active : ''}`}
+              style={{ backgroundColor: currentGroup.color || '#ccc' }}
+              onClick={() => !isActive && setGroup(currentGroup)}
+            >
+              <p>{currentGroup.name}</p>
+            </div>
+          );
+        })}
       </ContainerWithScrollBar>
 
     </div>

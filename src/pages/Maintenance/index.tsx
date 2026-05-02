@@ -19,7 +19,7 @@ export function Maintenance() {
   return (
     <>
       <Layout onBack={handleExit} isExiting={isExiting}>
-        <ContainerWithScrollBar className={styles.container}>
+        <div className={styles.container}>
           <h2>Normas de Manutenção</h2>
           <ul>
             <li><strong>Localização:</strong> Deve ser de conhecimento geral, devidamente sinalizada e acessível.</li>
@@ -34,7 +34,10 @@ export function Maintenance() {
             <li>Álcool, Água Oxigenada ou Tintura de Iodo (podem atrasar a cicatrização).</li>
           </ul>
 
-        </ContainerWithScrollBar>
+          <footer>
+            <p>(DGE, 2010)</p>
+          </footer>
+        </div>
       </Layout>
       <Outlet />
     </>
