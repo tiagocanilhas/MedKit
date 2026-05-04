@@ -1,3 +1,5 @@
+import { Maintenance } from "../../pages/Maintenance"
+
 const RAW_KEYS = {
   home: {
     title: '',
@@ -10,6 +12,31 @@ const RAW_KEYS = {
     importantNotes: '',
     quantity: '',
   },
+  maintenance: {
+    title: '',
+    location: '',
+    location_text: '',
+    resposibility: '',
+    responsibility_text: '',
+    documentation: '',
+    documentation_text: '',
+    procedures: '',
+    procedures_text: '',
+    dontUse: '',
+    item1: '',
+    item2: '',
+  },
+  recommendations: {
+    title: '',
+    maintenance: '',
+    maintenance_text: '',
+    accessibility: '',
+    accessibility_text: '',
+    identification: '',
+    identification_text: '',
+    safety: '',
+    safety_text: '',
+  }
 }
 
 function createKeys<T>(obj: T, prefix = ''): T {

@@ -2,13 +2,14 @@ import * as React from 'react'
 import { Outlet } from 'react-router-dom'
 
 import { Layout } from '../../components/Layout'
-import { ContainerWithScrollBar } from '../../components/ContainerWithScrollBar'
 
+import { useText } from '../../hooks/useText'
 import { useExit } from '../../hooks/useExit'
 
 import styles from './styles.module.css'
 
 export function Maintenance() {
+  const { t, keys } = useText()
   const { exitingPath, exit } = useExit()
   const isExiting = !!exitingPath
 
@@ -20,23 +21,26 @@ export function Maintenance() {
     <>
       <Layout onBack={handleExit} isExiting={isExiting}>
         <div className={styles.container}>
-          <h2>Normas de Manutenção</h2>
-          <ul>
-            <li><strong>Localização:</strong> Deve ser de conhecimento geral, devidamente sinalizada e acessível.</li>
-            <li><strong>Responsabilidade:</strong> A gestão e verificação periódica do conteúdo (incluindo datas de validade) é da responsabilidade do profissional responsável.</li>
-            <li><strong>Documentação:</strong> Deve existir uma lista de verificação (checklist) do conteúdo.</li>
-            <li><strong>Procedimentos:</strong> Recomenda-se a existência de instruções escritas sobre a atuação em caso de emergência.</li>
-          </ul>
+          <div className={styles.content}>
+            
+            <h2>{t(keys.maintenance.title)}:</h2>
+            <ul>
+              <li><strong>{t(keys.maintenance.location)}:</strong> {t(keys.maintenance.location_text)}</li>
+              <li><strong>{t(keys.maintenance.resposibility)}:</strong> {t(keys.maintenance.responsibility_text)}</li>
+              <li><strong>{t(keys.maintenance.documentation)}:</strong> {t(keys.maintenance.documentation_text)}</li>
+              <li><strong>{t(keys.maintenance.procedures)}:</strong> {t(keys.maintenance.procedures_text)}</li>
+            </ul>
 
-          <h2>O que NÃO utilizar</h2>
-          <ul>
-            <li>Algodão (pode absorver e infetar).</li>
-            <li>Álcool, Água Oxigenada ou Tintura de Iodo (podem atrasar a cicatrização).</li>
-          </ul>
+            <h3>{t(keys.maintenance.dontUse)}:</h3>
+            <ul>
+              <li>{t(keys.maintenance.item1)}</li>
+              <li>{t(keys.maintenance.item2)}</li>
+            </ul>
 
-          <footer>
-            <p>(DGE, 2010)</p>
-          </footer>
+            <footer>
+              <p>(DGE, 2010)</p>
+            </footer>
+          </div>
         </div>
       </Layout>
       <Outlet />

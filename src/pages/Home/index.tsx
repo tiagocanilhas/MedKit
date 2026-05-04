@@ -2,7 +2,6 @@ import * as React from 'react'
 
 import { HomeItem } from '../../components/HomeItem'
 import MedKitIcon from './MedKit.svg'
-import MaintenanceIcon from './Maintenance.svg'
 import RecommendationsIcon from './Recommendations.svg'
 
 import { useExit } from '../../hooks/useExit'
@@ -42,7 +41,7 @@ export function Home() {
 
         <div className={styles.row}>
           <div className={styles.wrapper}>
-            <HomeItem onClick={openMaintenance} isExiting={exitingPath === '/maintenance'} icon={MaintenanceIcon} />
+            <HomeItem onClick={openMaintenance} isExiting={exitingPath === '/maintenance'} icon={'/images/Maintenance.png'} />
           </div>
           <div className={styles.wrapper}>
             <HomeItem onClick={openRecommendations} isExiting={exitingPath === '/recommendations'} icon={RecommendationsIcon} />

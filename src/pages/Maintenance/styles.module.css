@@ -1,7 +1,17 @@
 .container {
-    background-color: #48d19c;
+    background-color: #d6955b;
 
     margin: 5px;
     padding: 5px;
     border-radius: 10px;
+}
+
+.content {
+    background-color: #dde9e9;
+    
+    margin: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
