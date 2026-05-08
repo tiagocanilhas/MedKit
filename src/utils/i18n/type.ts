@@ -1,9 +1,13 @@
-import { Maintenance } from "../../pages/Maintenance"
-
 const RAW_KEYS = {
   home: {
     title: '',
     description: '',
+    footer: {
+      courseLabel: '',
+      authorLabel: '',
+      supervisionLabel: '',
+      revisionLabel: '',
+    }
   },
   items: {},
   item: {

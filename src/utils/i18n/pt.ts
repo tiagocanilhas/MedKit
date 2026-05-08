@@ -4,6 +4,12 @@ const ptTranslations: TranslationType = {
   home: {
     title: 'Kit de Primeiros Socorros',
     description: 'Explora os itens do kit médico, consulta as normas de manutenção e descobre recomendações importantes selecionando os ícones abaixo!',
+    footer: {
+      courseLabel: 'Curso',
+      authorLabel: 'Autoria',
+      supervisionLabel: 'Orientação',
+      revisionLabel: 'Revisão Científica',
+    }
   },
   items: {},
   item: {
@@ -16,8 +22,8 @@ const ptTranslations: TranslationType = {
     title: 'Normas de Manutenção',
     location: 'Localização',
     location_text: 'Deve ser de conhecimento geral, devidamente sinalizada e acessível.',
-    resposibility: 'Responsabilidad',
-    responsibility_text: 'A gestão e verificação periódica do conteúdo (incluindo datas de validade) é da responsabilidade do profissional responsável.',
+    resposibility: 'Responsabilidade',
+    responsibility_text: 'A gestão e verificação periódica do conteúdo (incluindo datas de validade) é da responsabilidade do profissional habilitado.',
     documentation: 'Documentação',
     documentation_text: 'Deve existir uma lista de verificação (checklist) do conteúdo.',
     procedures: 'Procedimentos',
