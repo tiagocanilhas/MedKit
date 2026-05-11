@@ -5,7 +5,6 @@ const esTranslations: TranslationType = {
     title: 'Botiquín de Primeros Auxilios',
     description: '¡Explora los elementos del botiquín, consulta las normas de mantenimiento y descubre recomendaciones importantes seleccionando los iconos a continuación!',
     footer: {
-      courseLabel: 'Curso',
       authorLabel: 'Autoría',
       supervisionLabel: 'Orientación',
       revisionLabel: 'Revisión Científica',

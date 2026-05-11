@@ -5,7 +5,6 @@ const frTranslations: TranslationType = {
     title: 'Trousse de Premiers Secours',
     description: 'Explorez les articles de la trousse de secours, consultez les règles d\'entretien et découvrez des recommandations importantes en sélectionnant les icônes ci-dessous !',
     footer: {
-      courseLabel: 'Cours',
       authorLabel: 'Auteur',
       supervisionLabel: 'Supervision',
       revisionLabel: 'Revue scientifique',

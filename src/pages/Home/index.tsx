@@ -58,8 +58,7 @@ export function Home() {
       </div>
 
       <footer className={`${styles.footer} ${isExiting ? 'u-fadeOut' : 'u-fadeIn'}`}>
-        <p><strong>{t(keys.home.footer.courseLabel)}</strong> <br/> Licenciatura em Educação Básica</p>
-        <p><strong>{t(keys.home.footer.authorLabel)}</strong> <br/> Angélica Martins, Madalena Rosário, Mafalda Fernandes, Mónica Rosa e Tiago Canilhas </p> 
+        <p><strong>{t(keys.home.footer.authorLabel)}</strong> <br/> Angélica Martins, Madalena Rosário, Mafalda Fernandes, Mónica Rosa (Licenciatura em Educação Básica; ESE-IPSantarém) e Tiago Canilhas (Licenciatura em Engenharia Informática e de Computadores; ISEL-IPL) </p> 
         <p><strong>{t(keys.home.footer.supervisionLabel)}</strong> <br/> Marisa Correia, Ricardo Coscurão e Teresa Ribeirinha (CIEQV; ESE-IPSantarém)</p>
         <p><strong>{t(keys.home.footer.revisionLabel)}</strong> <br/> Isilda Ferreira (CIEQV; ESS-IPSantarém)</p>
       </footer>

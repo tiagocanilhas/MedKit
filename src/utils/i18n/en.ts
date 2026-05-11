@@ -5,7 +5,6 @@ const enTranslations: TranslationType = {
     title: 'First Aid Kit',
     description: 'Explore the medical kit items, check the maintenance guidelines, and discover important recommendations by selecting the icons below!',
     footer: {
-      courseLabel: 'Course',
       authorLabel: 'Author',
       supervisionLabel: 'Supervision',
       revisionLabel: 'Scientific Review',

@@ -3,7 +3,6 @@ const RAW_KEYS = {
     title: '',
     description: '',
     footer: {
-      courseLabel: '',
       authorLabel: '',
       supervisionLabel: '',
       revisionLabel: '',

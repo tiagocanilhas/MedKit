@@ -5,7 +5,6 @@ const ptTranslations: TranslationType = {
     title: 'Kit de Primeiros Socorros',
     description: 'Explora os itens do kit médico, consulta as normas de manutenção e descobre recomendações importantes selecionando os ícones abaixo!',
     footer: {
-      courseLabel: 'Curso',
       authorLabel: 'Autoria',
       supervisionLabel: 'Orientação',
       revisionLabel: 'Revisão Científica',
