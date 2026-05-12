@@ -3,7 +3,7 @@ import { TranslationType } from './type'
 const ptTranslations: TranslationType = {
   home: {
     title: 'Kit de Primeiros Socorros',
-    description: 'Explora os itens do kit médico, consulta as normas de manutenção e descobre recomendações importantes selecionando os ícones abaixo!',
+    description: 'Explora os itens do kit de primeiro socorros, consulta as normas de manutenção e descobre recomendações importantes selecionando os ícones abaixo!',
     footer: {
       authorLabel: 'Autoria',
       supervisionLabel: 'Orientação',
