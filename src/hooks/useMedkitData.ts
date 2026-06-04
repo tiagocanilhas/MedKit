@@ -30,7 +30,7 @@ function formatRawData(data: any[]): MedKitItem[] {
   return data.map((item: any, index: number) => ({
     ...item,
     id: index + 1,
-    imageUrl: item.imageUrl == '' ? '/images/no_image.jpg' : transformDriveLink(item.imageUrl),
+    imageUrl: item.imageUrl == '' ? './images/no_image.jpg' : transformDriveLink(item.imageUrl),
   }))
 }
 

@@ -32,8 +32,8 @@ export function Home() {
       <div className={`${styles.header} ${isExiting ? 'u-fadeOut' : 'u-fadeIn'}`}>
 
         <div className={styles.logosContainer}>
-          <img className={styles.logo} src="/images/eses_logo.png" alt="eses_logo"  />
-          <img className={styles.logo} src="/images/creative_lab_logo.png" alt="creative_lab_logo"  />
+          <img className={styles.logo} src="./images/eses_logo.png" alt="eses_logo"  />
+          <img className={styles.logo} src="./images/creative_lab_logo.png" alt="creative_lab_logo"  />
         </div>
 
         <div className={styles.textContainer}>
@@ -49,7 +49,7 @@ export function Home() {
 
         <div className={styles.row}>
           <div className={styles.wrapper}>
-            <HomeItem onClick={openMaintenance} isExiting={exitingPath === '/maintenance'} icon={'/images/Maintenance.png'} />
+            <HomeItem onClick={openMaintenance} isExiting={exitingPath === '/maintenance'} icon={'./images/Maintenance.png'} />
           </div>
           <div className={styles.wrapper}>
             <HomeItem onClick={openRecommendations} isExiting={exitingPath === '/recommendations'} icon={RecommendationsIcon} />
